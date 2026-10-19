@@ -2,7 +2,7 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator and Number Guessing Game have initial source implementations and are marked **In Progress**. The other 16 C projects currently have planning READMEs only.
+> **Current status:** Calculator, Number Guessing Game, and Unit Converter have initial source implementations and are marked **In Progress**. The other 15 C projects currently have planning READMEs only.
 
 ## Beginner
 
@@ -10,7 +10,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 | --- | --- | --- |
 | [Calculator](./Calculator/README.md) | Functions, switch statements, input validation | In Progress |
 | [Number Guessing Game](./Number-Guessing-Game/README.md) | Random numbers, loops, conditionals | In Progress |
-| [Unit Converter](./Unit-Converter/README.md) | Functions, menus, arithmetic | Planned |
+| [Unit Converter](./Unit-Converter/README.md) | Functions, menus, arithmetic | In Progress |
 | [Student Grade Calculator](./Student-Grade-Calculator/README.md) | Arrays, conditions, functions | Planned |
 | [Simple Interest Calculator](./Simple-Interest-Calculator/README.md) | Variables, formulas, input/output | Planned |
 | [Rock Paper Scissors](./Rock-Paper-Scissors/README.md) | Randomness, loops, game logic | Planned |
@@ -39,7 +39,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 
 ## Build and run
 
-The first two C implementations are [Calculator](./Calculator/README.md) and [Number Guessing Game](./Number-Guessing-Game/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
+Initial C implementations are [Calculator](./Calculator/README.md), [Number Guessing Game](./Number-Guessing-Game/README.md), and [Unit Converter](./Unit-Converter/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
 
 ```bash
 cd Calculator
