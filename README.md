@@ -2,7 +2,7 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** 36 project folders are scaffolded with planning READMEs. The program source code has not been implemented yet, so every project is currently marked **Planned**.
+> **Current status:** All 36 project folders are scaffolded. The C Calculator has an initial implementation and is marked **In Progress**; the other 35 projects remain **Planned**.
 
 ## Explore
 
@@ -108,13 +108,13 @@ C-CPP-Playground/
 └── LICENSE
 ```
 
-Each project folder currently contains a planning README. When a project is implemented, add its source files and update its README with real build instructions, features, usage examples, and testing notes.
+Each project folder contains a README documenting its scope and status. The [C Calculator](./C/Calculator/README.md) is the first project with source code; its compiler and edge-case verification checklist remains open. For other projects, add source files and update their READMEs with build instructions, features, usage examples, and testing notes.
 
 ## Compiling projects
 
 The website itself uses **plain HTML, CSS, and vanilla JavaScript**. It has no package manager, framework, or build step and is designed to work with GitHub Pages.
 
-The C/C++ projects will be native command-line programs, not programs that run directly inside the website. Once source code is added, use a compatible compiler such as GCC or Clang and follow the exact compile/run commands documented in that project's README. Do not assume a project is runnable until those instructions and source files exist.
+The C/C++ projects are native programs, not programs that run directly inside the website. Use a compatible compiler such as GCC or Clang and follow the exact commands documented in each project README. The Calculator's initial implementation is in [`C/Calculator/main.c`](./C/Calculator/main.c).
 
 Typical compiler commands (examples only; source files must exist first):
 
