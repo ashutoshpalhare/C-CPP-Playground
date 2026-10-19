@@ -1,0 +1,68 @@
+name: C Calculator CI
+
+on:
+  push:
+    paths:
+      - "C/Calculator/**"
+      - ".github/workflows/c-calculator.yml"
+  pull_request:
+    paths:
+      - "C/Calculator/**"
+      - ".github/workflows/c-calculator.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Compile with strict warnings
+        working-directory: C/Calculator
+        run: gcc -std=c11 -Wall -Wextra -Wpedantic -Werror main.c -o calculator -lm
+
+      - name: Test addition
+        working-directory: C/Calculator
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '+\n2\n3\nq\n' | ./calculator > addition.txt
+          grep -Fq 'Result: 5' addition.txt
+
+      - name: Test decimal multiplication
+        working-directory: C/Calculator
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '*\n2.5\n4\nq\n' | ./calculator > multiplication.txt
+          grep -Fq 'Result: 10' multiplication.txt
+
+      - name: Test division by zero
+        working-directory: C/Calculator
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '/\n8\n0\nq\n' | ./calculator > division-zero.txt
+          grep -Fq 'Error: division by zero is not allowed.' division-zero.txt
+
+      - name: Test invalid operator recovery
+        working-directory: C/Calculator
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '%%\n+\n2\n3\nq\n' | ./calculator > invalid-operator.txt
+          grep -Fq 'Unsupported operator.' invalid-operator.txt
+          grep -Fq 'Result: 5' invalid-operator.txt
+
+      - name: Test invalid numeric input recovery
+        working-directory: C/Calculator
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '+\nnot-a-number\n2\n3\nq\n' | ./calculator > invalid-number.txt
+          grep -Fq 'Invalid number.' invalid-number.txt
+          grep -Fq 'Result: 6' invalid-number.txt
