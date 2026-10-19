@@ -2,14 +2,14 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator has an initial source implementation and is marked **In Progress**. The other 17 C projects currently have planning READMEs only.
+> **Current status:** Calculator and Number Guessing Game have initial source implementations and are marked **In Progress**. The other 16 C projects currently have planning READMEs only.
 
 ## Beginner
 
 | Project | Main concepts | Status |
 | --- | --- | --- |
 | [Calculator](./Calculator/README.md) | Functions, switch statements, input validation | In Progress |
-| [Number Guessing Game](./Number-Guessing-Game/README.md) | Random numbers, loops, conditionals | Planned |
+| [Number Guessing Game](./Number-Guessing-Game/README.md) | Random numbers, loops, conditionals | In Progress |
 | [Unit Converter](./Unit-Converter/README.md) | Functions, menus, arithmetic | Planned |
 | [Student Grade Calculator](./Student-Grade-Calculator/README.md) | Arrays, conditions, functions | Planned |
 | [Simple Interest Calculator](./Simple-Interest-Calculator/README.md) | Variables, formulas, input/output | Planned |
@@ -39,7 +39,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 
 ## Build and run
 
-The [Calculator](./Calculator/README.md) has the first C implementation:
+The first two C implementations are [Calculator](./Calculator/README.md) and [Number Guessing Game](./Number-Guessing-Game/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
 
 ```bash
 cd Calculator
@@ -47,7 +47,7 @@ gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o calculator -lm
 ./calculator
 ```
 
-For every project, follow its own README for compiler requirements and build commands. Do not assume a project is complete until its code has been compiled and its relevant behaviours tested.
+For every project, follow its own README for compiler requirements and build commands. We are adding source code first and will compile, run, and debug projects locally after the planned implementations are in place.
 
 ## Implementation checklist
 
