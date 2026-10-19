@@ -1,14 +1,14 @@
 # C Projects
 
-A structured roadmap of **18 planned C projects** across beginner, intermediate, and advanced levels.
+A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** These folders contain planning READMEs only. C source code has not been implemented yet; projects remain marked **Planned** until real source and validation are added.
+> **Current status:** Calculator has an initial source implementation and is marked **In Progress**. The other 17 C projects currently have planning READMEs only.
 
 ## Beginner
 
 | Project | Main concepts | Status |
 | --- | --- | --- |
-| [Calculator](./Calculator/README.md) | Functions, switch statements, input validation | Planned |
+| [Calculator](./Calculator/README.md) | Functions, switch statements, input validation | In Progress |
 | [Number Guessing Game](./Number-Guessing-Game/README.md) | Random numbers, loops, conditionals | Planned |
 | [Unit Converter](./Unit-Converter/README.md) | Functions, menus, arithmetic | Planned |
 | [Student Grade Calculator](./Student-Grade-Calculator/README.md) | Arrays, conditions, functions | Planned |
@@ -39,18 +39,18 @@ A structured roadmap of **18 planned C projects** across beginner, intermediate,
 
 ## Build and run
 
-No executable source files are available yet. Once a project is implemented, its own README will provide tested compiler requirements and commands.
-
-Typical GCC example for a future single-file project:
+The [Calculator](./Calculator/README.md) has the first C implementation:
 
 ```bash
-gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o app
-./app
+cd Calculator
+gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o calculator -lm
+./calculator
 ```
+
+For every project, follow its own README for compiler requirements and build commands. Do not assume a project is complete until its code has been compiled and its relevant behaviours tested.
 
 ## Implementation checklist
 
-- [ ] Add source code and keep responsibilities clear.
 - [ ] Compile with warnings enabled and resolve relevant warnings.
 - [ ] Validate input and handle errors safely.
 - [ ] Test typical, invalid, and boundary inputs.
