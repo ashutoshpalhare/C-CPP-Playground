@@ -26,7 +26,7 @@ static int read_integer(const char *prompt, int minimum, int maximum, int *value
         errno = 0;
         parsed = strtol(start, &end, 10);
         if (start == end || errno == ERANGE) {
-            printf("Enter a whole number from %d to %d.\\n", minimum, maximum);
+            printf("Enter a whole number from %d to %d.\n", minimum, maximum);
             continue;
         }
         while (end != NULL && isspace((unsigned char)*end)) ++end;
