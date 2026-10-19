@@ -1,1 +1,83 @@
-<!-- C-CPP-Playground portfolio website will be implemented in Phase 3. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore C and C++ projects from beginner to advanced, with source code, concepts, and learning resources.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>C-CPP-Playground — Learn by Building</title>
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+  <header>
+    <a href="./" aria-label="C-CPP-Playground home">C-CPP-Playground</a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section aria-labelledby="hero-title">
+      <p>THE OPEN-SOURCE LEARNING PLAYGROUND</p>
+      <h1 id="hero-title">Learn C and C++ by <span>building real projects.</span></h1>
+      <p>Go from your first program to deeper systems concepts. Explore project ideas, understand the concepts behind them, and learn one build at a time.</p>
+      <a href="#projects">Explore projects</a>
+      <a href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </section>
+    <section aria-labelledby="stats-title">
+      <h2 id="stats-title">The playground at a glance</h2>
+      <dl>
+        <div><dt>Projects listed</dt><dd id="stat-total">—</dd></div>
+        <div><dt>C projects</dt><dd id="stat-c">—</dd></div>
+        <div><dt>C++ projects</dt><dd id="stat-cpp">—</dd></div>
+        <div><dt>Completed</dt><dd id="stat-completed">—</dd></div>
+      </dl>
+    </section>
+    <section id="projects" aria-labelledby="projects-title">
+      <header>
+        <p>FIND YOUR NEXT BUILD</p>
+        <h2 id="projects-title">Explore projects</h2>
+        <p>Filter by language or difficulty, or search for a project, description, or concept.</p>
+      </header>
+      <form role="search" aria-label="Search projects" action="#projects" method="get">
+        <label for="project-search">Search projects</label>
+        <input id="project-search" name="q" type="search" placeholder="Try pointers, files, games..." autocomplete="off">
+        <button type="reset">Clear search</button>
+      </form>
+      <fieldset>
+        <legend>Language</legend>
+        <button type="button" data-language="all" aria-pressed="true">All</button>
+        <button type="button" data-language="C" aria-pressed="false">C</button>
+        <button type="button" data-language="C++" aria-pressed="false">C++</button>
+      </fieldset>
+      <fieldset>
+        <legend>Difficulty</legend>
+        <button type="button" data-difficulty="all" aria-pressed="true">All levels</button>
+        <button type="button" data-difficulty="Beginner" aria-pressed="false">Beginner</button>
+        <button type="button" data-difficulty="Intermediate" aria-pressed="false">Intermediate</button>
+        <button type="button" data-difficulty="Advanced" aria-pressed="false">Advanced</button>
+      </fieldset>
+      <p id="results-summary" aria-live="polite">Project listings will appear here as the catalogue is added.</p>
+      <div id="project-grid" aria-label="Project catalogue">
+        <!-- Project cards will be rendered here in Phase 5. -->
+      </div>
+      <section id="empty-state" aria-labelledby="empty-state-title" hidden>
+        <h3 id="empty-state-title">No projects found</h3>
+        <p>Try a different search term or reset your filters.</p>
+        <button type="button" id="reset-filters">Reset filters</button>
+      </section>
+      <noscript><p>The interactive project catalogue requires JavaScript. The repository README contains the planned project list and setup details.</p></noscript>
+    </section>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">Built for learning, not just copying</h2>
+      <p>C-CPP-Playground is a growing collection of C and C++ projects designed to help learners practise programming fundamentals, problem-solving, data structures, and systems concepts.</p>
+      <p>Project status will be shown honestly. A project is linked only when its source folder is available in the repository.</p>
+    </section>
+  </main>
+  <footer>
+    <p>C-CPP-Playground · Learn by building, one project at a time.</p>
+    <p><a href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer">Open-source on GitHub</a></p>
+  </footer>
+</body>
+</html>
