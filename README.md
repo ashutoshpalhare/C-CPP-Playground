@@ -108,7 +108,7 @@ C-CPP-Playground/
 └── LICENSE
 ```
 
-Each project folder contains a README documenting its scope and status. The first three C implementations are [Calculator](./C/Calculator/README.md), [Number Guessing Game](./C/Number-Guessing-Game/README.md), and [Unit Converter](./C/Unit-Converter/README.md). We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
+Each project folder contains a README documenting its scope and status. The initial C implementations are [Calculator](./C/Calculator/README.md), [Number Guessing Game](./C/Number-Guessing-Game/README.md), [Unit Converter](./C/Unit-Converter/README.md), and [Student Grade Calculator](./C/Student-Grade-Calculator/README.md). We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
 
 ## Compiling projects
 
