@@ -2,7 +2,7 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** All 36 project folders are scaffolded. The C Calculator and C Number Guessing Game have initial source implementations and are marked **In Progress**; the other 34 projects remain **Planned**.
+> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, and C Unit Converter have initial source implementations and are marked **In Progress**; the other 33 projects remain **Planned**.
 
 ## Explore
 
@@ -108,13 +108,13 @@ C-CPP-Playground/
 └── LICENSE
 ```
 
-Each project folder contains a README documenting its scope and status. The [C Calculator](./C/Calculator/README.md) and [Number Guessing Game](./C/Number-Guessing-Game/README.md) are the first projects with source code. We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
+Each project folder contains a README documenting its scope and status. The first three C implementations are [Calculator](./C/Calculator/README.md), [Number Guessing Game](./C/Number-Guessing-Game/README.md), and [Unit Converter](./C/Unit-Converter/README.md). We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
 
 ## Compiling projects
 
 The website itself uses **plain HTML, CSS, and vanilla JavaScript**. It has no package manager, framework, or build step and is designed to work with GitHub Pages.
 
-The C/C++ projects are native programs, not programs that run directly inside the website. Use a compatible compiler such as GCC or Clang and follow the exact commands documented in each project README. The initial C implementations are in [`C/Calculator/main.c`](./C/Calculator/main.c) and [`C/Number-Guessing-Game/main.c`](./C/Number-Guessing-Game/main.c). Native programs will be compiled and run locally after the planned implementations have been added; GitHub Actions is not used to compile or execute these programs.
+The C/C++ projects are native programs, not programs that run directly inside the website. Use a compatible compiler such as GCC or Clang and follow the exact commands documented in each project README. The initial C implementations are in [`C/Calculator/main.c`](./C/Calculator/main.c), [`C/Number-Guessing-Game/main.c`](./C/Number-Guessing-Game/main.c), and [`C/Unit-Converter/main.c`](./C/Unit-Converter/main.c). Native programs will be compiled and run locally after the planned implementations have been added; GitHub Actions is not used to compile or execute these programs.
 
 Typical compiler commands (examples only; source files must exist first):
 
