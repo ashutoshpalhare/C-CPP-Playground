@@ -379,5 +379,183 @@
       <p><a href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer">Open-source on GitHub ↗</a></p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const REPOSITORY_URL = "https://github.com/ashutoshpalhare/C-CPP-Playground";
+      const projects = [
+        { name: "Calculator", language: "C", level: "Beginner", description: "Build a reliable command-line calculator with clear input handling and arithmetic operations.", concepts: ["switch", "functions", "input validation"], status: "Planned", available: false },
+        { name: "Number-Guessing-Game", language: "C", level: "Beginner", description: "Create a number guessing game with random numbers, hints, and an attempt counter.", concepts: ["rand", "loops", "conditionals"], status: "Planned", available: false },
+        { name: "Unit-Converter", language: "C", level: "Beginner", description: "Convert common units through a menu-driven terminal application.", concepts: ["functions", "menus", "arithmetic"], status: "Planned", available: false },
+        { name: "Student-Grade-Calculator", language: "C", level: "Beginner", description: "Calculate totals, percentages, and grades from validated student marks.", concepts: ["arrays", "conditions", "functions"], status: "Planned", available: false },
+        { name: "Simple-Interest-Calculator", language: "C", level: "Beginner", description: "Calculate simple interest and total amount with clear numeric input and output.", concepts: ["variables", "formulas", "I/O"], status: "Planned", available: false },
+        { name: "Rock-Paper-Scissors", language: "C", level: "Beginner", description: "Play against the computer with random choices, score tracking, and replay support.", concepts: ["randomness", "enums", "loops"], status: "Planned", available: false },
+
+        { name: "Tic-Tac-Toe", language: "C", level: "Intermediate", description: "Build a two-player terminal game with board rendering and win/draw detection.", concepts: ["2D arrays", "functions", "game logic"], status: "Planned", available: false },
+        { name: "Student-Management-System", language: "C", level: "Intermediate", description: "Manage student records with structured data and persistent file storage.", concepts: ["structs", "files", "CRUD"], status: "Planned", available: false },
+        { name: "Contact-Book", language: "C", level: "Intermediate", description: "Store and search contact entries, with validation and file-based persistence.", concepts: ["structs", "search", "file I/O"], status: "Planned", available: false },
+        { name: "Expense-Tracker", language: "C", level: "Intermediate", description: "Record expenses, categorise spending, and calculate totals from saved records.", concepts: ["structs", "files", "aggregation"], status: "Planned", available: false },
+        { name: "Quiz-Application", language: "C", level: "Intermediate", description: "Load questions, accept answers, calculate scores, and summarise quiz results.", concepts: ["arrays", "structs", "scoring"], status: "Planned", available: false },
+        { name: "Inventory-Management-System", language: "C", level: "Intermediate", description: "Track stock, update quantities, and report low inventory using saved records.", concepts: ["structs", "files", "searching"], status: "Planned", available: false },
+
+        { name: "Phonebook-Application", language: "C", level: "Advanced", description: "Create a more robust phonebook with indexed lookup, editing, sorting, and persistence.", concepts: ["pointers", "sorting", "file design"], status: "Planned", available: false },
+        { name: "Basic-HTTP-Server", language: "C", level: "Advanced", description: "Implement a minimal HTTP server to explore sockets, requests, and responses.", concepts: ["sockets", "HTTP", "networking"], status: "Planned", available: false },
+        { name: "Mini-Shell", language: "C", level: "Advanced", description: "Build a small command interpreter that launches processes and handles built-ins.", concepts: ["processes", "fork/exec", "signals"], status: "Planned", available: false },
+        { name: "File-Compression-Tool", language: "C", level: "Advanced", description: "Compress and decompress files with a documented, testable coding scheme.", concepts: ["bit operations", "Huffman coding", "files"], status: "Planned", available: false },
+        { name: "Terminal-Text-Editor", language: "C", level: "Advanced", description: "Explore terminal input, cursor movement, text buffers, and basic file editing.", concepts: ["terminal I/O", "buffers", "state"], status: "Planned", available: false },
+        { name: "Memory-Allocator-Simulator", language: "C", level: "Advanced", description: "Simulate allocation strategies and visualise fragmentation without replacing the system allocator.", concepts: ["pointers", "free lists", "fragmentation"], status: "Planned", available: false },
+
+        { name: "Quiz-Game", language: "C++", level: "Beginner", description: "Create a reusable quiz game with question sets, score summaries, and replay.", concepts: ["classes", "vectors", "control flow"], status: "Planned", available: false },
+        { name: "Task-Manager-App", language: "C++", level: "Beginner", description: "Organise terminal tasks by completion state, priority, and due date.", concepts: ["classes", "vectors", "sorting"], status: "Planned", available: false },
+        { name: "To-Do-List", language: "C++", level: "Beginner", description: "Build a simple task list with add, list, complete, and remove operations.", concepts: ["STL", "vectors", "functions"], status: "Planned", available: false },
+        { name: "Password-Generator", language: "C++", level: "Beginner", description: "Generate configurable passwords using character sets and clear option handling.", concepts: ["strings", "random", "validation"], status: "Planned", available: false },
+        { name: "Digital-Clock", language: "C++", level: "Beginner", description: "Display a live terminal clock and practise time formatting and update loops.", concepts: ["chrono", "time formatting", "loops"], status: "Planned", available: false },
+        { name: "Bank-Account-Simulator", language: "C++", level: "Beginner", description: "Model deposits, withdrawals, and balances with basic account rules.", concepts: ["classes", "encapsulation", "validation"], status: "Planned", available: false },
+
+        { name: "Library-Management-System", language: "C++", level: "Intermediate", description: "Manage a library catalogue, member records, borrowing, and returns.", concepts: ["OOP", "STL containers", "files"], status: "Planned", available: false },
+        { name: "Bank-Management-System", language: "C++", level: "Intermediate", description: "Model multiple accounts and transactions with persistent records and validation.", concepts: ["classes", "transactions", "persistence"], status: "Planned", available: false },
+        { name: "Snake-Game", language: "C++", level: "Intermediate", description: "Implement a grid-based snake game with movement, collision, and scoring.", concepts: ["game loop", "state", "collision"], status: "Planned", available: false },
+        { name: "Employee-Payroll-System", language: "C++", level: "Intermediate", description: "Calculate payroll from employee records, pay rules, and reports.", concepts: ["inheritance", "polymorphism", "files"], status: "Planned", available: false },
+        { name: "Parking-Lot-Management-System", language: "C++", level: "Intermediate", description: "Track parking slots, vehicle entry and exit, and fee calculations.", concepts: ["OOP", "maps", "time"], status: "Planned", available: false },
+        { name: "Tic-Tac-Toe-with-AI", language: "C++", level: "Intermediate", description: "Build a playable board game with a computer opponent using minimax search.", concepts: ["recursion", "minimax", "game trees"], status: "Planned", available: false },
+
+        { name: "Custom-String-Class", language: "C++", level: "Advanced", description: "Implement a string type to explore ownership, copying, and operator overloading.", concepts: ["RAII", "Rule of Five", "operators"], status: "Planned", available: false },
+        { name: "Chess-Game", language: "C++", level: "Advanced", description: "Model chess pieces, legal movement, board state, and check/checkmate detection.", concepts: ["OOP", "state modelling", "validation"], status: "Planned", available: false },
+        { name: "Chat-Application-using-Sockets", language: "C++", level: "Advanced", description: "Create a terminal chat application to practise network communication and concurrency.", concepts: ["sockets", "threads", "protocols"], status: "Planned", available: false },
+        { name: "Mini-Database-Engine", language: "C++", level: "Advanced", description: "Explore record storage, simple queries, indexing, and persistence in a small database engine.", concepts: ["parsing", "B-trees", "storage"], status: "Planned", available: false },
+        { name: "Memory-Pool-Allocator", language: "C++", level: "Advanced", description: "Build a pool allocator and compare allocation behaviour with standard facilities.", concepts: ["memory management", "alignment", "RAII"], status: "Planned", available: false },
+        { name: "Multithreaded-Download-Manager", language: "C++", level: "Advanced", description: "Design a segmented download manager to explore worker threads and coordinated progress.", concepts: ["threads", "synchronisation", "I/O"], status: "Planned", available: false }
+      ];
+
+      const grid = document.getElementById("project-grid");
+      const searchInput = document.getElementById("project-search");
+      const searchForm = document.getElementById("project-search-form");
+      const clearSearch = document.getElementById("clear-search");
+      const resultsSummary = document.getElementById("results-summary");
+      const emptyState = document.getElementById("empty-state");
+      const resetFiltersButton = document.getElementById("reset-filters");
+      const languageButtons = [...document.querySelectorAll("[data-language]")];
+      const difficultyButtons = [...document.querySelectorAll("[data-difficulty]")];
+      const state = { query: "", language: "all", difficulty: "all" };
+
+      const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      const normalise = (value) => value.normalize("NFKD").toLowerCase().replace(/[\u0300-\u036f]/g, "");
+      const formatName = (name) => name.replace(/-/g, " ");
+
+      function makeElement(tag, className, text) {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        if (text !== undefined) element.textContent = text;
+        return element;
+      }
+
+      function makeCard(project) {
+        const card = makeElement("article", "project-card");
+        const top = makeElement("div", "card-topline");
+        top.append(makeElement("span", "language-tag", project.language), makeElement("span", "difficulty-tag", project.level));
+        const title = makeElement("h3", "", formatName(project.name));
+        const description = makeElement("p", "", project.description);
+        const concepts = makeElement("ul", "concept-list");
+        concepts.setAttribute("aria-label", "Concepts covered");
+        project.concepts.forEach((concept) => concepts.append(makeElement("li", "", concept)));
+        const bottom = makeElement("div", "card-bottom");
+        bottom.append(makeElement("span", "status-tag", project.status));
+        if (project.available === true && ["In Progress", "Completed"].includes(project.status)) {
+          const link = makeElement("a", "project-link", project.status === "Completed" ? "View source ↗" : "Explore source ↗");
+          const folder = project.language === "C" ? "C" : "CPP";
+          link.href = REPOSITORY_URL + "/tree/main/" + folder + "/" + encodeURIComponent(project.name);
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.setAttribute("aria-label", "Open " + formatName(project.name) + " source folder on GitHub");
+          bottom.append(link);
+        } else {
+          const unavailable = makeElement("span", "project-link", "Source coming soon");
+          unavailable.setAttribute("aria-disabled", "true");
+          bottom.append(unavailable);
+        }
+        card.append(top, title, description, concepts, bottom);
+        return card;
+      }
+
+      function updateStats() {
+        const completed = projects.filter((project) => project.status === "Completed" && project.available).length;
+        document.getElementById("stat-total").textContent = String(projects.length);
+        document.getElementById("stat-c").textContent = String(projects.filter((project) => project.language === "C").length);
+        document.getElementById("stat-cpp").textContent = String(projects.filter((project) => project.language === "C++").length);
+        document.getElementById("stat-completed").textContent = String(completed);
+        document.querySelector("#stats-title").textContent = projects.length + " planned projects, with " + completed + " completed so far";
+      }
+
+      function updatePressed(buttons, attribute, selected) {
+        buttons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset[attribute] === selected)));
+      }
+
+      function render() {
+        const query = normalise(state.query.trim());
+        const filtered = projects.filter((project) => {
+          if (state.language !== "all" && project.language !== state.language) return false;
+          if (state.difficulty !== "all" && project.level !== state.difficulty) return false;
+          if (!query) return true;
+          const searchable = normalise([project.name, formatName(project.name), project.language, project.level, project.description, ...project.concepts, project.status].join(" "));
+          return searchable.includes(query);
+        });
+
+        const fragment = document.createDocumentFragment();
+        filtered.forEach((project) => fragment.append(makeCard(project)));
+        grid.replaceChildren(fragment);
+        emptyState.hidden = filtered.length !== 0;
+        resultsSummary.replaceChildren();
+        const count = makeElement("strong", "", String(filtered.length));
+        resultsSummary.append(count, document.createTextNode(" of " + projects.length + " projects shown"));
+        if (state.query.trim()) resultsSummary.append(document.createTextNode(' for “' + state.query.trim() + '”'));
+        if (state.language !== "all" || state.difficulty !== "all") {
+          const filters = [state.language !== "all" ? state.language : "", state.difficulty !== "all" ? state.difficulty : ""].filter(Boolean).join(" · ");
+          resultsSummary.append(document.createTextNode(" · " + filters));
+        }
+        updatePressed(languageButtons, "language", state.language);
+        updatePressed(difficultyButtons, "difficulty", state.difficulty);
+      }
+
+      function resetAll() {
+        state.query = "";
+        state.language = "all";
+        state.difficulty = "all";
+        searchInput.value = "";
+        render();
+      }
+
+      searchInput.addEventListener("input", () => {
+        state.query = searchInput.value;
+        render();
+      });
+      searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        state.query = searchInput.value;
+        render();
+      });
+      clearSearch.addEventListener("click", (event) => {
+        event.preventDefault();
+        searchInput.value = "";
+        state.query = "";
+        searchInput.focus();
+        render();
+      });
+      languageButtons.forEach((button) => button.addEventListener("click", () => {
+        state.language = button.dataset.language;
+        render();
+      }));
+      difficultyButtons.forEach((button) => button.addEventListener("click", () => {
+        state.difficulty = button.dataset.difficulty;
+        render();
+      }));
+      resetFiltersButton.addEventListener("click", resetAll);
+
+      updateStats();
+      render();
+    })();
+  </script>
+
 </body>
 </html>
