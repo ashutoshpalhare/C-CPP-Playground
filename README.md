@@ -2,7 +2,7 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, and C Unit Converter have initial source implementations and are marked **In Progress**; the other 33 projects remain **Planned**.
+> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, C Unit Converter, and Student Grade Calculator have initial source implementations and are marked **In Progress**; the other 32 projects remain **Planned**.
 
 ## Explore
 
