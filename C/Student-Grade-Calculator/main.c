@@ -10,6 +10,7 @@
 static int read_integer(const char *prompt, int minimum, int maximum, int *value) {
     char buffer[INPUT_SIZE];
     for (;;) {
+        char *start;
         char *end = NULL;
         long parsed;
         printf("%s", prompt);
@@ -20,10 +21,16 @@ static int read_integer(const char *prompt, int minimum, int maximum, int *value
             puts("Input is too long. Please try again.");
             continue;
         }
+        start = buffer;
+        while (isspace((unsigned char)*start)) ++start;
         errno = 0;
-        parsed = strtol(buffer, &end, 10);
+        parsed = strtol(start, &end, 10);
+        if (start == end || errno == ERANGE) {
+            printf("Enter a whole number from %d to %d.\\n", minimum, maximum);
+            continue;
+        }
         while (end != NULL && isspace((unsigned char)*end)) ++end;
-        if (buffer[0] == '\0' || end == buffer || (end != NULL && *end != '\0') || errno == ERANGE || parsed < minimum || parsed > maximum) {
+        if ((end != NULL && *end != '\0') || parsed < minimum || parsed > maximum) {
             printf("Enter a whole number from %d to %d.\n", minimum, maximum);
             continue;
         }
