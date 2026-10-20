@@ -65,9 +65,8 @@ static int valid_field(const char *text, size_t capacity) {
 }
 
 static int parse_record(const char *line, Contact *contact) {
-    char extra;
-    return sscanf(line, "%d,%79[^,],%31[^,],%99[^,]%c",
-                  &contact->id, contact->name, contact->phone, contact->email, &extra) == 4
+    return sscanf(line, "%d,%79[^,],%31[^,],%99[^,\\r\\n]",
+                  &contact->id, contact->name, contact->phone, contact->email) == 4
            && contact->id > 0;
 }
 
@@ -98,7 +97,6 @@ static int next_id(FILE *file) {
 static int add_contact(void) {
     Contact contact;
     int status;
-    char id_text[LINE_CAP];
 
     FILE *file = fopen(DATA_FILE, "a+");
     if (file == NULL) {
@@ -138,7 +136,6 @@ static int add_contact(void) {
     }
     if (fclose(file) != 0) { perror("Could not close contacts file"); return 1; }
     puts("Contact added successfully.");
-    (void)id_text;
     return 1;
 }
 
