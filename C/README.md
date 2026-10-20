@@ -2,7 +2,7 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, and Contact Book have initial source implementations and are marked **In Progress**. The other 9 C projects currently have planning READMEs only.
+> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, Contact Book, and Expense Tracker have initial source implementations and are marked **In Progress**. The other 8 C projects currently have planning READMEs only.
 
 ## Beginner
 
@@ -22,7 +22,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 | [Tic-Tac-Toe](./Tic-Tac-Toe/README.md) | Arrays, functions, game logic | In Progress |
 | [Student Management System](./Student-Management-System/README.md) | Structs, files, record management | In Progress |
 | [Contact Book](./Contact-Book/README.md) | Structs, searching, file I/O | In Progress |
-| [Expense Tracker](./Expense-Tracker/README.md) | Structs, files, aggregation | Planned |
+| [Expense Tracker](./Expense-Tracker/README.md) | Structs, files, aggregation | In Progress |
 | [Quiz Application](./Quiz-Application/README.md) | Arrays, structs, scoring | Planned |
 | [Inventory Management System](./Inventory-Management-System/README.md) | Structs, files, searching | Planned |
 
