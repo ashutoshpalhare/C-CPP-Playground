@@ -2,7 +2,7 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, C Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, and Tic-Tac-Toe have initial source implementations and are marked **In Progress**; the other 29 projects remain **Planned**.
+> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, C Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, and Student Management System have initial source implementations and are marked **In Progress**; the other 28 projects remain **Planned**.
 
 ## Explore
 
@@ -108,7 +108,7 @@ C-CPP-Playground/
 └── LICENSE
 ```
 
-Each project folder contains a README documenting its scope and status. The initial C implementations are [Calculator](./C/Calculator/README.md), [Number Guessing Game](./C/Number-Guessing-Game/README.md), [Unit Converter](./C/Unit-Converter/README.md), and [Student Grade Calculator](./C/Student-Grade-Calculator/README.md), plus [Simple Interest Calculator](./C/Simple-Interest-Calculator/README.md), [Rock Paper Scissors](./C/Rock-Paper-Scissors/README.md), and [Tic-Tac-Toe](./C/Tic-Tac-Toe/README.md). We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
+Each project folder contains a README documenting its scope and status. The initial C implementations are [Calculator](./C/Calculator/README.md), [Number Guessing Game](./C/Number-Guessing-Game/README.md), [Unit Converter](./C/Unit-Converter/README.md), and [Student Grade Calculator](./C/Student-Grade-Calculator/README.md), plus [Simple Interest Calculator](./C/Simple-Interest-Calculator/README.md), [Rock Paper Scissors](./C/Rock-Paper-Scissors/README.md), and [Tic-Tac-Toe](./C/Tic-Tac-Toe/README.md), and [Student Management System](./C/Student-Management-System/README.md). We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
 
 ## Compiling projects
 
