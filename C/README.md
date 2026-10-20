@@ -2,7 +2,7 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator, Number Guessing Game, Unit Converter, and Student Grade Calculator have initial source implementations and are marked **In Progress**. The other 14 C projects currently have planning READMEs only.
+> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, and Simple Interest Calculator have initial source implementations and are marked **In Progress**. The other 13 C projects currently have planning READMEs only.
 
 ## Beginner
 
@@ -12,7 +12,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 | [Number Guessing Game](./Number-Guessing-Game/README.md) | Random numbers, loops, conditionals | In Progress |
 | [Unit Converter](./Unit-Converter/README.md) | Functions, menus, arithmetic | In Progress |
 | [Student Grade Calculator](./Student-Grade-Calculator/README.md) | Arrays, conditions, functions | In Progress |
-| [Simple Interest Calculator](./Simple-Interest-Calculator/README.md) | Variables, formulas, input/output | Planned |
+| [Simple Interest Calculator](./Simple-Interest-Calculator/README.md) | Variables, formulas, input/output | In Progress |
 | [Rock Paper Scissors](./Rock-Paper-Scissors/README.md) | Randomness, loops, game logic | Planned |
 
 ## Intermediate
