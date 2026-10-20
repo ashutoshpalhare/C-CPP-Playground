@@ -2,7 +2,7 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, and Simple Interest Calculator have initial source implementations and are marked **In Progress**. The other 13 C projects currently have planning READMEs only.
+> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, Simple Interest Calculator, and Rock Paper Scissors have initial source implementations and are marked **In Progress**. The other 12 C projects currently have planning READMEs only.
 
 ## Beginner
 
@@ -13,7 +13,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 | [Unit Converter](./Unit-Converter/README.md) | Functions, menus, arithmetic | In Progress |
 | [Student Grade Calculator](./Student-Grade-Calculator/README.md) | Arrays, conditions, functions | In Progress |
 | [Simple Interest Calculator](./Simple-Interest-Calculator/README.md) | Variables, formulas, input/output | In Progress |
-| [Rock Paper Scissors](./Rock-Paper-Scissors/README.md) | Randomness, loops, game logic | Planned |
+| [Rock Paper Scissors](./Rock-Paper-Scissors/README.md) | Randomness, loops, game logic | In Progress |
 
 ## Intermediate
 
@@ -39,7 +39,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 
 ## Build and run
 
-Initial C implementations are [Calculator](./Calculator/README.md), [Number Guessing Game](./Number-Guessing-Game/README.md), and [Unit Converter](./Unit-Converter/README.md), plus [Student Grade Calculator](./Student-Grade-Calculator/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
+Initial C implementations are [Calculator](./Calculator/README.md), [Number Guessing Game](./Number-Guessing-Game/README.md), and [Unit Converter](./Unit-Converter/README.md), plus [Student Grade Calculator](./Student-Grade-Calculator/README.md), [Simple Interest Calculator](./Simple-Interest-Calculator/README.md), and [Rock Paper Scissors](./Rock-Paper-Scissors/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
 
 ```bash
 cd Calculator
