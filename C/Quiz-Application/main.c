@@ -65,6 +65,7 @@ int main(void) {
         printf("\nQuestion %d/%d: %s\n", i + 1, QUESTION_COUNT, questions[i].question);
         for (int j = 0; j < OPTION_COUNT; ++j)
             printf("  %c) %s\n", 'A' + j, questions[i].options[j]);
+        printf("Your answer: ");
         for (;;) {
             status = read_answer(input, sizeof(input));
             if (status == 0) { puts("\nInput closed. Quiz ended early."); goto results; }
