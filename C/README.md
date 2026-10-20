@@ -2,7 +2,7 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, and Student Management System have initial source implementations and are marked **In Progress**. The other 10 C projects currently have planning READMEs only.
+> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, and Contact Book have initial source implementations and are marked **In Progress**. The other 9 C projects currently have planning READMEs only.
 
 ## Beginner
 
@@ -21,7 +21,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 | --- | --- | --- |
 | [Tic-Tac-Toe](./Tic-Tac-Toe/README.md) | Arrays, functions, game logic | In Progress |
 | [Student Management System](./Student-Management-System/README.md) | Structs, files, record management | In Progress |
-| [Contact Book](./Contact-Book/README.md) | Structs, searching, file I/O | Planned |
+| [Contact Book](./Contact-Book/README.md) | Structs, searching, file I/O | In Progress |
 | [Expense Tracker](./Expense-Tracker/README.md) | Structs, files, aggregation | Planned |
 | [Quiz Application](./Quiz-Application/README.md) | Arrays, structs, scoring | Planned |
 | [Inventory Management System](./Inventory-Management-System/README.md) | Structs, files, searching | Planned |
@@ -39,7 +39,7 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 
 ## Build and run
 
-Initial C implementations are [Calculator](./Calculator/README.md), [Number Guessing Game](./Number-Guessing-Game/README.md), and [Unit Converter](./Unit-Converter/README.md), plus [Student Grade Calculator](./Student-Grade-Calculator/README.md), [Simple Interest Calculator](./Simple-Interest-Calculator/README.md), and [Rock Paper Scissors](./Rock-Paper-Scissors/README.md), and [Tic-Tac-Toe](./Tic-Tac-Toe/README.md), and [Student Management System](./Student-Management-System/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
+Initial C implementations are [Calculator](./Calculator/README.md), [Number Guessing Game](./Number-Guessing-Game/README.md), and [Unit Converter](./Unit-Converter/README.md), plus [Student Grade Calculator](./Student-Grade-Calculator/README.md), [Simple Interest Calculator](./Simple-Interest-Calculator/README.md), and [Rock Paper Scissors](./Rock-Paper-Scissors/README.md), and [Tic-Tac-Toe](./Tic-Tac-Toe/README.md), and [Student Management System](./Student-Management-System/README.md), and [Contact Book](./Contact-Book/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
 
 ```bash
 cd Calculator
