@@ -130,8 +130,8 @@ static int add_student(void) {
         fclose(file);
         return status == 0 ? 0 : 1;
     }
-    if (!valid_name(student.name)) {
-        puts("Name cannot be empty or contain commas/control characters.");
+    if (!valid_name(student.name) || strlen(student.name) >= NAME_CAP) {
+        puts("Name must be non-empty, shorter than 80 characters, and contain no commas/control characters.");
         fclose(file);
         return 1;
     }
