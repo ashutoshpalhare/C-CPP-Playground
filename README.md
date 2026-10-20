@@ -2,7 +2,7 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, C Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, Contact Book, Expense Tracker, and Quiz Application have initial source implementations and are marked **In Progress**; the other 25 projects remain **Planned**.
+> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, C Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, Contact Book, Expense Tracker, Quiz Application, and Inventory Management System have initial source implementations and are marked **In Progress**; the other 24 projects remain **Planned**.
 
 ## Explore
 
