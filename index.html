@@ -303,7 +303,7 @@
     <section class="stats container" aria-labelledby="stats-title">
       <h2 id="stats-title" class="section-heading" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">The playground at a glance</h2>
       <dl class="stats-grid">
-        <div class="stat"><dd id="stat-total">36</dd><dt>Planned projects</dt></div>
+        <div class="stat"><dd id="stat-total">36</dd><dt>Projects listed</dt></div>
         <div class="stat"><dd id="stat-c">18</dd><dt>C projects</dt></div>
         <div class="stat"><dd id="stat-cpp">18</dd><dt>C++ projects</dt></div>
         <div class="stat"><dd id="stat-completed">0</dd><dt>Completed so far</dt></div>
@@ -486,7 +486,7 @@
         document.getElementById("stat-c").textContent = String(projects.filter((project) => project.language === "C").length);
         document.getElementById("stat-cpp").textContent = String(projects.filter((project) => project.language === "C++").length);
         document.getElementById("stat-completed").textContent = String(completed);
-        document.querySelector("#stats-title").textContent = projects.length + " planned projects, with " + completed + " completed so far";
+        document.querySelector("#stats-title").textContent = projects.length + " projects listed, with " + completed + " completed so far";
       }
 
       function updatePressed(buttons, attribute, selected) {
