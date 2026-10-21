@@ -2,12 +2,12 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** All 36 project folders are scaffolded. The C Calculator, C Number Guessing Game, C Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, Contact Book, Expense Tracker, Quiz Application, and Inventory Management System have initial source implementations and are marked **In Progress**; the other 24 projects remain **Planned**.
+> **Current status:** All 36 project folders are scaffolded. All **18 C projects now have initial source implementations** and are marked **In Progress**. The 18 C++ projects remain **Planned** and currently have planning documentation only. None of the native projects has yet been compiled or run by the repository owner; local testing and debugging will follow after source implementation is complete.
 
 ## Explore
 
 - **[Open the project directory](./index.html)** — search projects and filter by language or difficulty.
-- **[C projects](./C/README.md)** — 18 planned projects.
+- **[C projects](./C/README.md)** — 18 projects, source implementations added; local verification pending.
 - **[C++ projects](./CPP/README.md)** — 18 planned projects.
 - **[MIT License](./LICENSE)**
 
@@ -108,7 +108,7 @@ C-CPP-Playground/
 └── LICENSE
 ```
 
-Each project folder contains a README documenting its scope and status. The initial C implementations are [Calculator](./C/Calculator/README.md), [Number Guessing Game](./C/Number-Guessing-Game/README.md), [Unit Converter](./C/Unit-Converter/README.md), and [Student Grade Calculator](./C/Student-Grade-Calculator/README.md), plus [Simple Interest Calculator](./C/Simple-Interest-Calculator/README.md), [Rock Paper Scissors](./C/Rock-Paper-Scissors/README.md), and [Tic-Tac-Toe](./C/Tic-Tac-Toe/README.md), and [Student Management System](./C/Student-Management-System/README.md), and [Contact Book](./C/Contact-Book/README.md). We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
+Each project folder contains a README documenting its scope and status. All 18 C projects now have initial source implementations; see the [C project roadmap](./C/README.md) for the complete list and individual documentation. We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
 
 ## Compiling projects
 
