@@ -2,13 +2,13 @@
 
 A growing, beginner-to-advanced collection of **C and C++ learning projects**, with a searchable project directory hosted as a static website.
 
-> **Current status:** All 36 project folders are scaffolded. All **18 C projects now have initial source implementations** and are marked **In Progress**. The 18 C++ projects remain **Planned** and currently have planning documentation only. None of the native projects has yet been compiled or run by the repository owner; local testing and debugging will follow after source implementation is complete.
+> **Current status:** All 36 C and C++ projects have source implementations and project READMEs, and all are marked **In Progress**. Source code is present, but native programs have not yet been compiled or run by the repository owner. Local compilation, testing, and debugging are the next steps; no project should be marked Completed until it passes verification.
 
 ## Explore
 
 - **[Open the project directory](./index.html)** — search projects and filter by language or difficulty.
 - **[C projects](./C/README.md)** — 18 projects, source implementations added; local verification pending.
-- **[C++ projects](./CPP/README.md)** — 18 planned projects.
+- **[C++ projects](./CPP/README.md)** — 18 projects with source implementations; local verification pending.
 - **[MIT License](./LICENSE)**
 
 ## Learning roadmap
@@ -108,7 +108,7 @@ C-CPP-Playground/
 └── LICENSE
 ```
 
-Each project folder contains a README documenting its scope and status. All 18 C projects now have initial source implementations; see the [C project roadmap](./C/README.md) for the complete list and individual documentation. We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
+Each project folder contains a README documenting its scope and status. All 18 C and all 18 C++ projects now have initial source implementations. See the [C project roadmap](./C/README.md) and [C++ project roadmap](./CPP/README.md) for each project's scope, build instructions, and verification checklist. We are implementing the full project collection first; local compilation, execution, and debugging will follow afterward.
 
 ## Compiling projects
 
