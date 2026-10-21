@@ -2,7 +2,7 @@
 
 A structured roadmap of **18 C projects** across beginner, intermediate, and advanced levels.
 
-> **Current status:** Calculator, Number Guessing Game, Unit Converter, Student Grade Calculator, Simple Interest Calculator, Rock Paper Scissors, Tic-Tac-Toe, Student Management System, Contact Book, Expense Tracker, Quiz Application, and Inventory Management System have initial source implementations and are marked **In Progress**. The other 6 C projects currently have planning READMEs only.
+> **Current status:** All 18 C projects now have source code and a project README, and every one is marked **In Progress**. *In Progress* means the source has been added but has **not yet been compiled and tested by the repository owner**; no project is marked Completed. Native C programs are compiled and run locally, never by GitHub Actions.
 
 ## Beginner
 
@@ -30,24 +30,34 @@ A structured roadmap of **18 C projects** across beginner, intermediate, and adv
 
 | Project | Main concepts | Status |
 | --- | --- | --- |
-| [Phonebook Application](./Phonebook-Application/README.md) | Pointers, sorting, file design | Planned |
-| [Basic HTTP Server](./Basic-HTTP-Server/README.md) | Sockets, HTTP, networking | Planned |
-| [Mini Shell](./Mini-Shell/README.md) | Processes, fork/exec, signals | Planned |
-| [File Compression Tool](./File-Compression-Tool/README.md) | Bit operations, Huffman coding, files | Planned |
-| [Terminal Text Editor](./Terminal-Text-Editor/README.md) | Terminal I/O, buffers, state | Planned |
-| [Memory Allocator Simulator](./Memory-Allocator-Simulator/README.md) | Pointers, free lists, fragmentation | Planned |
+| [Phonebook Application](./Phonebook-Application/README.md) | Pointers, sorting, file design | In Progress |
+| [Basic HTTP Server](./Basic-HTTP-Server/README.md) | Sockets, HTTP, networking | In Progress |
+| [Mini Shell](./Mini-Shell/README.md) | Processes, fork/exec, signals | In Progress |
+| [File Compression Tool](./File-Compression-Tool/README.md) | Bit operations, Huffman coding, files | In Progress |
+| [Terminal Text Editor](./Terminal-Text-Editor/README.md) | Terminal I/O, buffers, state | In Progress |
+| [Memory Allocator Simulator](./Memory-Allocator-Simulator/README.md) | Pointers, free lists, fragmentation | In Progress |
 
 ## Build and run
 
-Initial C implementations are [Calculator](./Calculator/README.md), [Number Guessing Game](./Number-Guessing-Game/README.md), and [Unit Converter](./Unit-Converter/README.md), plus [Student Grade Calculator](./Student-Grade-Calculator/README.md), [Simple Interest Calculator](./Simple-Interest-Calculator/README.md), and [Rock Paper Scissors](./Rock-Paper-Scissors/README.md), and [Tic-Tac-Toe](./Tic-Tac-Toe/README.md), and [Student Management System](./Student-Management-System/README.md), and [Contact Book](./Contact-Book/README.md). Compile each locally using its own README; testing is deferred until the project collection is implemented. The Calculator command is:
+Every project has a `main.c` and its own README with exact instructions. The general pattern, from inside a project folder, is:
 
 ```bash
-cd Calculator
-gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o calculator -lm
-./calculator
+gcc -std=c11 -Wall -Wextra -Wpedantic main.c -o app
+./app            # Windows: app.exe
 ```
 
-For every project, follow its own README for compiler requirements and build commands. We are adding source code first and will compile, run, and debug projects locally after the planned implementations are in place.
+Some projects need extra flags or a specific platform. Check each README before building:
+
+| Project | Platform / flags |
+| --- | --- |
+| [Calculator](./Calculator/README.md) | Add `-lm` when linking |
+| [Basic HTTP Server](./Basic-HTTP-Server/README.md) | Windows (MinGW-w64): add `-lws2_32`. Also builds on Linux, macOS, and WSL |
+| [Mini Shell](./Mini-Shell/README.md) | **POSIX only** — Linux, macOS, or WSL. Not native Windows |
+| [Terminal Text Editor](./Terminal-Text-Editor/README.md) | **POSIX terminal only** — Linux, macOS, or WSL. Not native Windows |
+
+All other projects use standard C and are intended to build on Windows, Linux, and macOS. That is the intent of the code; it has not been verified yet.
+
+Source is being added first; compiling, running, and debugging happen locally afterwards.
 
 ## Implementation checklist
 
