@@ -10,6 +10,7 @@ A growing, beginner-to-advanced collection of **C and C++ learning projects**, w
 - **[C projects](./C/README.md)** — 18 projects, source implementations added; local verification pending.
 - **[C++ projects](./CPP/README.md)** — 18 projects with source implementations; local verification pending.
 - **[Local verification tracker](./docs/LOCAL-VERIFICATION.md)** — compile/runtime evidence for all 36 projects; currently not tested.
+- **[Website accessibility checklist](./docs/WEBSITE-CHECKLIST.md)** — source-level review and pending browser checks.
 - **[Contributing guide](./CONTRIBUTING.md)** — coding, documentation, and pull request expectations.
 - **[Changelog](./CHANGELOG.md)** — notable repository updates.
 - **[MIT License](./LICENSE)**
