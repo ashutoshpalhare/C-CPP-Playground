@@ -1,0 +1,28 @@
+# C compiler outputs
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.pdb
+*.ilk
+*.idb
+*.gch
+*.gcda
+*.gcno
+
+# Build directories
+build/
+cmake-build-*/
+Debug/
+Release/
+x64/
+x86/
+
+# Local compiler/test logs
+*.log
+*.tmp
