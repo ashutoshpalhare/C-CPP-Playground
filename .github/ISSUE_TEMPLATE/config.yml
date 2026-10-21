@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project catalogue
+    url: https://ashutoshpalhare.github.io/C-CPP-Playground/
+    about: Browse the C and C++ project catalogue before opening an issue.
