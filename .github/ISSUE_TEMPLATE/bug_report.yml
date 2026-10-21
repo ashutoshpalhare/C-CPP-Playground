@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a reproducible issue in a project or the website
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please search existing issues first. Never include passwords, private data, or sensitive files."
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - C project
+        - C++ project
+        - Project catalogue website
+        - Documentation
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Project name or page
+      placeholder: "e.g. Calculator or project catalogue"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, compiler and version, browser/device, as relevant.
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact compile command and safe input, if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include a concise error message or screenshot without sensitive information.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked existing issues and included reproducible details.
+          required: true
+        - label: I have not described an untested result as confirmed.
+          required: true
