@@ -1,0 +1,37 @@
+name: Feature request
+description: Suggest a project, learning improvement, or catalogue enhancement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or learning need
+      description: What is difficult or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the improvement and how it should work.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - C project
+        - C++ project
+        - Project catalogue website
+        - Documentation
+        - Accessibility
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or additional context
+    validations:
+      required: false
