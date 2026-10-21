@@ -1,0 +1,49 @@
+# Native build outputs (C / C++)
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.class
+*.pdb
+*.ilk
+*.idb
+*.pch
+*.gch
+*.gcda
+*.gcno
+*.profraw
+core
+core.*
+
+# Common build/output directories
+build/
+cmake-build-*/
+out/
+dist/
+Debug/
+Release/
+x64/
+x86/
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE/editor metadata
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
