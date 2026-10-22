@@ -7,6 +7,7 @@ Notable repository changes are recorded here. Dates refer to repository changes,
 - Added GitHub Pages deployment workflow for the static project catalogue.
 - Added root, C-specific, and C++-specific ignore rules for generated build artifacts and local files.
 - Corrected the catalogue statistic label from “Planned projects” to “Projects listed”.
+- Made catalogue searches shareable and restorable through the `?q=` URL parameter; clearing or resetting search removes it.
 - Added a local verification tracker for all 36 native projects; compile and runtime results remain **Not tested** until confirmed locally.
 - Added contributor guidelines and GitHub issue / pull request templates.
 - Native C/C++ compilation and execution remain intentionally outside GitHub Actions.
