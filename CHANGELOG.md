@@ -9,6 +9,7 @@ Notable repository changes are recorded here. Dates refer to repository changes,
 - Corrected the catalogue statistic label from “Planned projects” to “Projects listed”.
 - Made catalogue searches shareable and restorable through the `?q=` URL parameter; clearing or resetting search removes it.
 - Expanded the About section with the developer credit, a short introduction, portrait, and social / professional links.
+- Upgraded the sticky navigation with language quick-filters and learning/contribution links; redesigned the footer with project resources, developer links, license, and responsive layout.
 - Added a local verification tracker for all 36 native projects; compile and runtime results remain **Not tested** until confirmed locally.
 - Added contributor guidelines and GitHub issue / pull request templates.
 - Native C/C++ compilation and execution remain intentionally outside GitHub Actions.
