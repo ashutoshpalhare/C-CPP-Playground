@@ -55,32 +55,20 @@
       font-weight: 750;
     }
     .skip-link:focus { transform: translateY(0); }
-    .site-header {
-      position: sticky; top: 0; z-index: 10;
-      border-bottom: 1px solid rgba(255,255,255,.07);
-      background: rgba(10,10,10,.84);
-      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-    }
-    .nav-wrap {
-      width: min(var(--content-width), calc(100% - 48px));
-      min-height: 76px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; gap: 24px;
-    }
-    .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.045em; }
-    .brand-mark {
-      display: grid; place-items: center; width: 36px; height: 36px;
-      border: 1px solid var(--border-accent); border-radius: 11px;
-      color: var(--accent-bright); background: var(--accent-soft);
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px;
-      letter-spacing: -.08em;
-    }
+    .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(255,255,255,.07); background: rgba(10,10,10,.86); box-shadow: 0 8px 30px rgba(0,0,0,.12); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .nav-wrap { width: min(var(--content-width), calc(100% - 48px)); min-height: 76px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; font-weight: 800; letter-spacing: -.045em; }
+    .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--border-accent); border-radius: 12px; color: var(--accent-bright); background: linear-gradient(145deg, rgba(245,166,35,.16), rgba(245,166,35,.035)); box-shadow: inset 0 1px rgba(255,255,255,.07), 0 4px 18px rgba(245,166,35,.06); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; letter-spacing: -.08em; }
     .brand-name { font-size: 15px; }
     .brand-name span { color: var(--accent-bright); }
-    .main-nav { display: flex; align-items: center; gap: 27px; color: var(--muted); font-size: 13px; font-weight: 600; }
-    .main-nav a { transition: color .18s ease; }
+    .main-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(12px, 1.65vw, 24px); color: var(--muted); font-size: 12px; font-weight: 650; }
+    .main-nav a { position: relative; white-space: nowrap; transition: color .18s ease; }
+    .main-nav a:not(.nav-cta)::after { content: ""; position: absolute; right: 0; bottom: -8px; left: 0; height: 1px; background: var(--accent-bright); transform: scaleX(0); transform-origin: left; transition: transform .18s ease; }
+    .main-nav a:not(.nav-cta):hover::after { transform: scaleX(1); }
     .main-nav a:hover { color: var(--text); }
-    .main-nav .nav-cta { padding: 9px 13px; border: 1px solid var(--border); border-radius: 10px; color: var(--text); }
-    .main-nav .nav-cta:hover { border-color: var(--border-accent); color: var(--accent-bright); }
+    .main-nav .nav-cta { padding: 10px 14px; border: 1px solid var(--border-accent); border-radius: 10px; color: #171006; background: linear-gradient(110deg, #f5a623, #ffdc91); box-shadow: 0 5px 18px rgba(245,166,35,.1); }
+    .main-nav .nav-cta:hover { color: #171006; box-shadow: 0 7px 22px rgba(245,166,35,.2); transform: translateY(-1px); }
+    .main-nav a:focus-visible, .brand:focus-visible, .footer a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 4px; border-radius: 4px; }
 
     main { overflow: clip; }
     .container { width: min(var(--content-width), calc(100% - 48px)); margin-inline: auto; }
@@ -230,12 +218,27 @@
     .creator-links a:hover { color: var(--accent-bright); border-color: var(--border-accent); background: var(--accent-soft); }
     .creator-links a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; }
 
-    .site-footer { border-top: 1px solid var(--border); background: rgba(255,255,255,.012); }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 88px; }
-    .footer-inner p { margin: 0; color: var(--subtle); font-size: 12px; }
-    .footer-inner a { color: var(--muted); transition: color .18s ease; }
-    .footer-inner a:hover { color: var(--accent-bright); }
-    .footer-brand { color: var(--text) !important; font-weight: 750; }
+    .site-footer { position: relative; overflow: hidden; border-top: 1px solid var(--border); background: radial-gradient(ellipse at 12% 0%, rgba(245,166,35,.075), transparent 34%), linear-gradient(180deg, #10100f, #090909 78%); }
+    .site-footer::before { content: ""; position: absolute; top: 0; left: 7%; width: 86%; height: 1px; background: linear-gradient(90deg, transparent, rgba(245,166,35,.4), transparent); }
+    .footer-top { display: grid; grid-template-columns: minmax(230px, 1.6fr) repeat(3, minmax(125px, 1fr)); gap: clamp(26px, 4vw, 56px); padding-top: 58px; padding-bottom: 48px; }
+    .footer-brand-lockup { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 18px; }
+    .footer-brand-lockup .brand-mark { width: 36px; height: 36px; }
+    .footer-brand-lockup .brand-name { color: var(--text); font-size: 15px; }
+    .footer-about > p { max-width: 330px; margin-bottom: 20px; color: var(--muted); font-size: 13px; line-height: 1.85; }
+    .footer-github { display: inline-flex; align-items: center; gap: 9px; color: var(--accent-bright); font-size: 12px; font-weight: 750; }
+    .footer-github span { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--border-accent); border-radius: 8px; background: var(--accent-soft); }
+    .footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
+    .footer-column h2 { margin: 3px 0 5px; color: var(--text); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .footer-column a { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; transition: color .18s ease, transform .18s ease; }
+    .footer-column a span { color: var(--subtle); font-size: 10px; opacity: .65; }
+    .footer-column a:hover, .footer-github:hover { color: var(--accent-bright); }
+    .footer-column a:hover { transform: translateX(2px); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 70px; padding-top: 18px; padding-bottom: 18px; border-top: 1px solid var(--border); }
+    .footer-bottom p { margin: 0; color: var(--subtle); font-size: 11px; line-height: 1.7; }
+    .footer-bottom p a { color: var(--muted); font-weight: 700; }
+    .footer-bottom p a:hover, .footer-bottom-links a:hover { color: var(--accent-bright); }
+    .footer-bottom-links { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+    .footer-bottom-links a { color: var(--muted); font-size: 11px; font-weight: 650; white-space: nowrap; }
 
     @media (min-width: 1400px) { .hero { padding-top: 125px; } }
     @media (max-width: 900px) {
@@ -250,8 +253,8 @@
       .nav-wrap { min-height: 66px; gap: 12px; }
       .brand-name { font-size: 13px; }
       .brand-mark { width: 32px; height: 32px; }
-      .main-nav { gap: 14px; font-size: 12px; }
-      .main-nav a:nth-child(2) { display: none; }
+      .main-nav { gap: 12px; font-size: 11px; }
+      .main-nav a[data-nav-language], .main-nav .nav-contribute { display: none; }
       .main-nav .nav-cta { padding: 8px 9px; }
       .hero { padding: 76px 0 60px; }
       .hero h1 { font-size: clamp(39px, 11vw, 58px); }
@@ -280,7 +283,11 @@
       .creator-avatar { width: 58px; height: 58px; border-radius: 16px; }
       .creator-links { gap: 7px; }
       .creator-links a { min-height: 33px; padding: 6px 8px; font-size: 10px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; justify-content: center; gap: 5px; padding: 22px 0; }
+      .footer-top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 22px; padding-top: 38px; padding-bottom: 34px; }
+      .footer-about { grid-column: 1 / -1; }
+      .footer-about > p { max-width: 440px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; justify-content: center; gap: 10px; padding-top: 18px; padding-bottom: 22px; }
+      .footer-bottom-links { gap: 15px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -296,8 +303,12 @@
         <span class="brand-name">C-CPP-<span>Playground</span></span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#projects">Projects</a>
+        <a href="#projects">Explore</a>
+        <a href="#projects" data-nav-language="C">C Projects</a>
+        <a href="#projects" data-nav-language="C++">C++ Projects</a>
+        <a href="https://github.com/ashutoshpalhare/C-CPP-Playground/blob/main/README.md" target="_blank" rel="noopener noreferrer">Learning Guide</a>
         <a href="#about">About</a>
+        <a class="nav-contribute" href="https://github.com/ashutoshpalhare/C-CPP-Playground/issues" target="_blank" rel="noopener noreferrer">Contribute</a>
         <a class="nav-cta" href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </nav>
     </div>
@@ -407,10 +418,44 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p><a class="footer-brand" href="./">C-CPP-Playground</a> · Learn by building, one project at a time.</p>
-      <p><a href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer">Open-source on GitHub ↗</a></p>
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container footer-top">
+      <div class="footer-about">
+        <a class="footer-brand-lockup" href="./" aria-label="C-CPP-Playground home">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span class="brand-name">C-CPP-<span>Playground</span></span>
+        </a>
+        <p>A practical, open-source space to learn programming by exploring projects, strengthening fundamentals, and building one step at a time.</p>
+        <a class="footer-github" href="https://github.com/ashutoshpalhare/C-CPP-Playground" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span> Explore the source on GitHub</a>
+      </div>
+      <div class="footer-column">
+        <h2>Explore</h2>
+        <a href="#projects">All projects <span>↗</span></a>
+        <a href="#projects" data-nav-language="C">C projects <span>↗</span></a>
+        <a href="#projects" data-nav-language="C++">C++ projects <span>↗</span></a>
+        <a href="#about">About this project <span>↗</span></a>
+      </div>
+      <div class="footer-column">
+        <h2>Resources</h2>
+        <a href="https://github.com/ashutoshpalhare/C-CPP-Playground/blob/main/README.md" target="_blank" rel="noopener noreferrer">Learning guide <span>↗</span></a>
+        <a href="https://github.com/ashutoshpalhare/C-CPP-Playground/blob/main/docs/LOCAL-VERIFICATION.md" target="_blank" rel="noopener noreferrer">Verification tracker <span>↗</span></a>
+        <a href="https://github.com/ashutoshpalhare/C-CPP-Playground/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Contributing guide <span>↗</span></a>
+        <a href="https://github.com/ashutoshpalhare/C-CPP-Playground/issues" target="_blank" rel="noopener noreferrer">Report an issue <span>↗</span></a>
+      </div>
+      <div class="footer-column footer-connect">
+        <h2>Connect</h2>
+        <a href="https://github.com/ashutoshpalhare" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/ashutoshpalhare" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+        <a href="https://ashutoshpalhare.github.io/" target="_blank" rel="noopener noreferrer">Developer portfolio <span>↗</span></a>
+        <a href="https://ashutoshpalhare.github.io/BioLinksV2/" target="_blank" rel="noopener noreferrer">All social links <span>↗</span></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="footer-year">2026</span> <a href="https://ashutoshpalhare.github.io/" target="_blank" rel="noopener noreferrer">Ashutosh Palhare</a>. Built with curiosity and C/C++.</p>
+      <div class="footer-bottom-links">
+        <a href="https://github.com/ashutoshpalhare/C-CPP-Playground/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
+        <a href="#main-content">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
@@ -419,6 +464,13 @@
       "use strict";
 
       const REPOSITORY_URL = "https://github.com/ashutoshpalhare/C-CPP-Playground";
+      document.querySelectorAll("[data-nav-language]").forEach((link) => {
+        link.addEventListener("click", () => {
+          const language = link.dataset.navLanguage;
+          const filter = document.querySelector(`[data-language="${language}"]`);
+          if (filter) filter.click();
+        });
+      });
       const projects = [
         { name: "Calculator", language: "C", level: "Beginner", description: "Build a reliable command-line calculator with clear input handling and arithmetic operations.", concepts: ["switch", "functions", "input validation"], status: "In Progress", available: true },
         { name: "Number-Guessing-Game", language: "C", level: "Beginner", description: "Create a number guessing game with random numbers, hints, and an attempt counter.", concepts: ["rand", "loops", "conditionals"], status: "In Progress", available: true },
