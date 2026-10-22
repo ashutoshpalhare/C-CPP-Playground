@@ -438,7 +438,16 @@
       const resetFiltersButton = document.getElementById("reset-filters");
       const languageButtons = [...document.querySelectorAll("[data-language]")];
       const difficultyButtons = [...document.querySelectorAll("[data-difficulty]")];
-      const state = { query: "", language: "all", difficulty: "all" };
+      const initialQuery = new URLSearchParams(window.location.search).get("q") || "";
+      const state = { query: initialQuery, language: "all", difficulty: "all" };
+      searchInput.value = initialQuery;
+
+      function syncQueryParam(query) {
+        const url = new URL(window.location.href);
+        if (query.trim()) url.searchParams.set("q", query.trim());
+        else url.searchParams.delete("q");
+        window.history.replaceState({}, "", url);
+      }
 
       const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
       const normalise = (value) => value.normalize("NFKD").toLowerCase().replace(/[\u0300-\u036f]/g, "");
@@ -521,6 +530,7 @@
 
       function resetAll() {
         state.query = "";
+        syncQueryParam("");
         state.language = "all";
         state.difficulty = "all";
         searchInput.value = "";
@@ -529,17 +539,20 @@
 
       searchInput.addEventListener("input", () => {
         state.query = searchInput.value;
+        syncQueryParam(state.query);
         render();
       });
       searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
         state.query = searchInput.value;
+        syncQueryParam(state.query);
         render();
       });
       clearSearch.addEventListener("click", (event) => {
         event.preventDefault();
         searchInput.value = "";
         state.query = "";
+        syncQueryParam("");
         searchInput.focus();
         render();
       });
