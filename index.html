@@ -211,14 +211,24 @@
 
     .about-section { padding-top: 28px; padding-bottom: 100px; }
     .about-panel {
-      display: grid; grid-template-columns: .85fr 1.15fr; gap: 44px; align-items: center;
       padding: clamp(25px, 5vw, 48px); border: 1px solid var(--border); border-radius: 22px;
       background: radial-gradient(ellipse at 0% 0%, rgba(245,166,35,.08), transparent 58%), var(--surface);
     }
-    .about-panel h2 { max-width: 400px; margin-bottom: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.13; letter-spacing: -.06em; }
+    .about-heading { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 32px; align-items: end; padding-bottom: 30px; border-bottom: 1px solid var(--border); }
+    .about-panel h2 { max-width: 440px; margin-bottom: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.13; letter-spacing: -.06em; }
     .about-copy p { color: var(--muted); font-size: 14px; }
     .about-copy p:last-child { margin-bottom: 0; }
     .about-copy strong { color: var(--text); font-weight: 650; }
+    .creator-card { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 20px; align-items: start; padding-top: 30px; }
+    .creator-avatar { width: 82px; height: 82px; object-fit: cover; border: 1px solid var(--border-accent); border-radius: 22px; background: var(--surface-raised); box-shadow: 0 0 0 5px rgba(245,166,35,.045); }
+    .creator-kicker { margin-bottom: 4px; color: var(--accent-bright) !important; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 10px !important; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    .creator-name { margin-bottom: 8px; font-size: clamp(21px, 3vw, 27px); line-height: 1.2; letter-spacing: -.04em; }
+    .creator-bio { max-width: 740px; margin-bottom: 18px; color: var(--muted); font-size: 13px; }
+    .creator-bio strong { color: var(--text); }
+    .creator-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .creator-links a { display: inline-flex; align-items: center; gap: 7px; min-height: 35px; padding: 7px 10px; border: 1px solid var(--border); border-radius: 9px; color: var(--muted); background: rgba(255,255,255,.018); font-size: 11px; font-weight: 700; transition: color .18s ease, border-color .18s ease, background .18s ease; }
+    .creator-links a:hover { color: var(--accent-bright); border-color: var(--border-accent); background: var(--accent-soft); }
+    .creator-links a:focus-visible { outline: 2px solid var(--accent-bright); outline-offset: 3px; }
 
     .site-footer { border-top: 1px solid var(--border); background: rgba(255,255,255,.012); }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 88px; }
@@ -233,7 +243,7 @@
       #project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .project-toolbar { grid-template-columns: 1fr; }
       .filter-groups { gap: 18px 24px; }
-      .about-panel { grid-template-columns: 1fr; gap: 20px; }
+      .about-heading { grid-template-columns: 1fr; gap: 18px; }
     }
     @media (max-width: 600px) {
       .nav-wrap, .container { width: min(100% - 32px, var(--content-width)); }
@@ -265,7 +275,11 @@
       .project-card { padding: 18px; }
       .project-card p { min-height: 0; }
       .about-section { padding-top: 12px; padding-bottom: 65px; }
-      .about-panel { padding: 24px 20px; gap: 18px; }
+      .about-panel { padding: 24px 20px; }
+      .creator-card { grid-template-columns: 58px minmax(0, 1fr); gap: 14px; padding-top: 24px; }
+      .creator-avatar { width: 58px; height: 58px; border-radius: 16px; }
+      .creator-links { gap: 7px; }
+      .creator-links a { min-height: 33px; padding: 6px 8px; font-size: 10px; }
       .footer-inner { flex-direction: column; align-items: flex-start; justify-content: center; gap: 5px; padding: 22px 0; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -362,13 +376,33 @@
 
     <section class="about-section container" id="about" aria-labelledby="about-title">
       <div class="about-panel">
-        <div>
-          <p class="eyebrow">The idea behind the code</p>
-          <h2 id="about-title">Built for learning, <span style="color:var(--accent-bright)">not just copying.</span></h2>
+        <div class="about-heading">
+          <div>
+            <p class="eyebrow">The idea behind the code</p>
+            <h2 id="about-title">Built for learning, <span style="color:var(--accent-bright)">not just copying.</span></h2>
+          </div>
+          <div class="about-copy">
+            <p>C-CPP-Playground is an open-source learning project created to make C and C++ practice more approachable—from programming fundamentals to data structures and systems concepts.</p>
+            <p><strong>Progress over hype.</strong> Project status stays honest, and projects are marked complete only after proper local verification.</p>
+          </div>
         </div>
-        <div class="about-copy">
-          <p>C-CPP-Playground is a growing collection of C and C++ projects designed to help learners practise programming fundamentals, problem-solving, data structures, and systems concepts.</p>
-          <p><strong>Progress over hype.</strong> Project status will be shown honestly, and a project is linked only when its source folder is available in the repository.</p>
+        <div class="creator-card" aria-label="About the developer">
+          <img class="creator-avatar" src="https://raw.githubusercontent.com/ashutoshpalhare/BioLinks/main/assets/ap.jpeg" alt="Ashutosh Palhare" width="82" height="82" loading="lazy">
+          <div>
+            <p class="creator-kicker">Designed &amp; maintained by</p>
+            <h3 class="creator-name">Ashutosh Palhare</h3>
+            <p class="creator-bio">I'm a <strong>Full Stack Developer</strong> who enjoys building useful web experiences, exploring software engineering, and sharing practical learning resources. This playground is part of my effort to learn by building—and help other developers do the same.</p>
+            <nav class="creator-links" aria-label="Ashutosh Palhare social and professional links">
+              <a href="https://github.com/ashutoshpalhare" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/ashutoshpalhare" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn ↗</a>
+              <a href="https://twitter.com/ashutoshpalhare" target="_blank" rel="noopener noreferrer" aria-label="Twitter or X profile">X / Twitter ↗</a>
+              <a href="https://www.instagram.com/ashutoshpalhare/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">Instagram ↗</a>
+              <a href="https://www.facebook.com/ashutoshpalhare/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">Facebook ↗</a>
+              <a href="https://ashutoshpalhare.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Personal portfolio">Portfolio ↗</a>
+              <a href="https://ashutoshpalhare.github.io/BioLinksV2/" target="_blank" rel="noopener noreferrer" aria-label="All links and profiles">All links ↗</a>
+              <a href="mailto:ashutoshpalhare@gmail.com" aria-label="Email Ashutosh Palhare">Email ↗</a>
+            </nav>
+          </div>
         </div>
       </div>
     </section>
